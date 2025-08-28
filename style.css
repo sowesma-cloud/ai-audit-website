@@ -1,106 +1,116 @@
-/* Global styles for the AI Red Teaming business website */
+/* ===============================
+   NPVIS Site Styles (Full Reset)
+   =============================== */
 
+/* Color system */
+:root {
+  --brand: #182657;            /* header / brand */
+  --hero-grad-1: #182657;
+  --hero-grad-2: #4b6cb7;
+
+  --bg: #f5f7fb;               /* page background */
+  --panel: #0f172a;            /* dark card/panel */
+  --border: #334155;
+  --fg: #1f2937;               /* default text on light bg */
+  --fg-invert: #f8fafc;        /* text on dark card */
+  --muted: #64748b;
+  --accent: #38bdf8;           /* CTA/button */
+  --accent-ink: #002234;
+}
+
+/* Global */
+* { box-sizing: border-box; }
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f7fb;
-    color: #333;
-    line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--fg);
 }
 
+/* Header / Nav */
 header {
-    background-color: #182657;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--brand);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-
+header h1 { margin: 0; font-size: 1.8rem; }
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
+  list-style: none; margin: 0; padding: 0;
+  display: flex; gap: 1rem;
 }
-
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff; text-decoration: none; font-weight: bold;
+}
+nav a:hover, nav a:focus { text-decoration: underline; }
+nav a.cta {
+  background: var(--accent); color: var(--accent-ink);
+  padding: .5rem .8rem; border-radius: 8px; text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
+/* Hero */
 .hero {
-    background: linear-gradient(135deg, #182657 0%, #4b6cb7 100%);
-    color: white;
-    padding: 4rem 2rem;
-    text-align: center;
+  background: linear-gradient(135deg, var(--hero-grad-1) 0%, var(--hero-grad-2) 100%);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.hero h2 { margin-top: 0; font-size: 2.2rem; }
+.btn {
+  display:inline-block; padding:12px 16px; border-radius:10px;
+  font-weight:700; text-decoration:none;
+  background: var(--accent); color: var(--accent-ink);
 }
 
-.hero h2 {
-    margin-top: 0;
-    font-size: 2.4rem;
-}
-
+/* Containers / Grids */
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 1000px; margin: 24px auto 64px; padding: 0 24px;
+}
+.grid, .features-list {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 16px; margin: 24px auto; padding: 0 24px;
+  max-width: 1000px;
 }
 
-.features-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.feature-item {
-    background-color: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.feature-item h3 {
-    margin-top: 0;
-    color: #182657;
-}
-
-footer {
-    background-color: #182657;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-/* Minimal helpers for new sections */
-.container { max-width: 1000px; margin: 24px auto 64px; padding: 0 24px; }
-.features-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; margin: 16px 0 24px; }
-.feature-item { background: #131a31; border: 1px solid #1e293b; padding: 16px; border-radius: 12px; }
-.btn { display:inline-block; padding:12px 16px; border-radius:10px; text-decoration:none; font-weight:700; }
-.btn { background:#38bdf8; color:#002234; } /* tweak colors to your theme */
-.grid { max-width:1000px; margin: 24px auto; padding: 0 24px; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
-.card { background:#131a31; border:1px solid #1e293b; padding: 20px; border-radius: 14px; }
-/* Ensure card and feature text is readable */
+/* Cards (dark) */
 .card, .feature-item {
-  color: #f1f5f9;   /* very light gray for good contrast */
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  color: var(--fg-invert);           /* force light text on dark bg */
+  box-shadow: 0 4px 10px rgba(2, 6, 23, 0.25);
 }
-
 .card h3, .feature-item h3 {
-  color: #ffffff;   /* pure white for headings */
-  font-weight: 700;
+  color: #fff;
+  font-weight: 800;
+  margin-top: 0;
 }
-.card, .feature-item { background: #ffffff !important; color:#000000 !important; }
+.card p, .feature-item p,
+.card li, .feature-item li {
+  color: #e2e8f0;                    /* readable paragraph color */
+}
 
+/* Section headings */
+h2 {
+  margin: 0 0 12px;
+  color: var(--brand);
+}
+
+/* Footer */
+footer {
+  background-color: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .hero { padding: 3rem 1.2rem; }
+  .grid, .features-list, .container { padding: 0 16px; }
+}
