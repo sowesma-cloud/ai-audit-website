@@ -93,3 +93,13 @@ footer {
 .btn { background:#38bdf8; color:#002234; } /* tweak colors to your theme */
 .grid { max-width:1000px; margin: 24px auto; padding: 0 24px; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
 .card { background:#131a31; border:1px solid #1e293b; padding: 20px; border-radius: 14px; }
+/* Ensure card and feature text is readable */
+.card, .feature-item {
+  color: #f1f5f9;   /* very light gray for good contrast */
+}
+
+.card h3, .feature-item h3 {
+  color: #ffffff;   /* pure white for headings */
+  font-weight: 700;
+}
+
