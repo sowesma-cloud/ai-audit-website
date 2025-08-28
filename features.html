@@ -1,37 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - SecureLLM</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Features - Neural Processing Validation & Integrity Solutions (NPVIS)</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <h1>SecureLLM</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <h2>Our Capabilities</h2>
-        <p>SecureLLM offers a comprehensive suite of tools and services to evaluate and secure your language models. Our approach aligns with responsible AI practices recommended by leading organizations. Microsoft notes that red teaming is an important practice in identifying harms and informing mitigations for LLM applications【47827325534835†L68-L92】. We build on this philosophy to deliver the following capabilities:</p>
-        <h3>Adversarial Prompt Corpus</h3>
-        <p>We curate and maintain an extensive corpus of adversarial prompts across multiple categories, including jailbreak attempts, prompt injections, sensitive information leakage and tool abuse. These prompts are designed to uncover potential weaknesses and policy evasion tactics in your models.</p>
-        <h3>Automated Test Harness</h3>
-        <p>Our harness automates the process of sending adversarial prompts to your model, capturing responses, and evaluating outcomes. The evaluation layer uses heuristic and machine learning–based detectors to identify violations of your safety policies. Results are aggregated into metrics like evasion rate per category and overall risk scores.</p>
-        <h3>Risk Management & Governance</h3>
-        <p>We provide guidance on establishing a governance process that aligns with frameworks such as the NIST AI Risk Management Framework and Microsoft’s recommended red teaming practices. This includes defining risk tiers, assembling diverse red‑teamers【47827325534835†L94-L115】, and ensuring coverage across model and application layers【47827325534835†L149-L161】.</p>
-        <h3>Continuous Hardening</h3>
-        <p>Our platform supports iterative testing cycles. After each round of testing, we assist you in implementing mitigations—such as safety tune-ups, additional filters, or prompt adjustments—and then retest to measure improvements. Continuous monitoring ensures that your models remain resilient as threats evolve.</p>
-    </div>
-    <footer>
-        <p>&copy; 2025 SecureLLM. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1>NPVIS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Features of the NPVIS MVP Harness</h2>
+    <p>NPVIS delivers a practical, evidence-based audit for AI systems, blending automated adversarial testing with process-aware checks and clear scorecards founders can use with customers, investors, and partners.</p>
+
+    <h3>1) Adversarial Red-Team Coverage</h3>
+    <ul>
+      <li><strong>Jailbreaks &amp; policy evasion:</strong> role-play, translation, code-block smuggling, multilingual prompts.</li>
+      <li><strong>Prompt &amp; indirect injection (RAG/tools):</strong> markdown/HTML/JSON injection, link-based override attempts, untrusted corpus tests.</li>
+      <li><strong>Sensitive-data leakage:</strong> system-prompt exfiltration, keys/PII/training-data regurgitation checks.</li>
+      <li><strong>Tool abuse &amp; schema tampering:</strong> function-call argument pollution, unsafe side-effects, cost/DoS probes.</li>
+    </ul>
+
+    <h3>2) Process &amp; Accountability Checks</h3>
+    <ul>
+      <li><strong>Chain-of-work validation:</strong> require a step outline before execution; flag missing/contradictory steps.</li>
+      <li><strong>Workflow compliance:</strong> verify that multi-step tasks follow the required sequence and preconditions.</li>
+      <li><strong>Human-augmented oversight (HALP-style):</strong> optional “confirm to proceed” gates for high-risk steps.</li>
+    </ul>
+
+    <h3>3) Integrity &amp; Robustness Metrics</h3>
+    <ul>
+      <li><strong>Evasion &amp; severity:</strong> overall/severe violation rates across attack families.</li>
+      <li><strong>Fairness &amp; toxicity:</strong> equalized-odds/parity deltas, toxicity probabilities.</li>
+      <li><strong>Hallucination risk:</strong> unsupported claims when chain-of-work lacks evidence.</li>
+      <li><strong>Pipeline robustness:</strong> safe handling of malformed inputs, schema drift, and tool errors.</li>
+      <li><strong>Optional robustness attacks:</strong> FGSM/BIM/PGD/DeepFool for classifier/embedding components.</li>
+    </ul>
+
+    <h3>4) Startup-Focused Scorecards</h3>
+    <ul>
+      <li><strong>Concise, shareable reports:</strong> executive summary, evidence snapshots, and remediation plan.</li>
+      <li><strong>Buyer-ready:</strong> artifacts founders can use in diligence, pilots, and early enterprise conversations.</li>
+    </ul>
+
+    <h3>5) Continuous Validation Loop</h3>
+    <ul>
+      <li><strong>Regression packs:</strong> every failure becomes a permanent test.</li>
+      <li><strong>Release gates:</strong> configurable thresholds (e.g., 0% severe on high-risk classes; ≤1% overall evasion).</li>
+      <li><strong>Versioned runs:</strong> model/prompt/data changes trigger re-runs for traceable improvements.</li>
+    </ul>
+
+    <h3>6) Governance Alignment</h3>
+    <ul>
+      <li><strong>NIST AI-RMF mapping:</strong> Govern → Map → Measure → Manage for defensible process.</li>
+      <li><strong>MITRE ATLAS linkage:</strong> findings tied to recognized TTPs and case studies.</li>
+    </ul>
+
+    <h3>What You Get</h3>
+    <ul>
+      <li><strong>Evidence pack:</strong> prompts, outputs, traces, tool args, and judge results.</li>
+      <li><strong>Composite risk score:</strong> combines evasion, severity, chain-of-work, workflow, and pipeline metrics.</li>
+      <li><strong>Actionable hardening:</strong> guardrails, retrieval/HTML/JSON sanitizers, tool allow-lists, rate limits, and safety-tuning guidance.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Neural Processing Validation &amp; Integrity Solutions (NPVIS). All rights reserved.</p>
+  </footer>
 </body>
 </html>
