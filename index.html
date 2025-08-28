@@ -1,48 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureLLM - AI Red Teaming & Evaluation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NPVIS — Neural Processing Validation & Integrity Solutions</title>
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="NPVIS provides adversarial red-teaming and process-aware audit for AI systems, including chain-of-work validation, workflow compliance, and pipeline robustness."/>
 </head>
 <body>
-    <header>
-        <h1>SecureLLM</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h2>Robust AI Evaluation & Red Teaming for LLMs</h2>
-        <p>Identify vulnerabilities, test safeguards and ensure responsible AI deployments. Our platform provides comprehensive adversarial testing and evaluation tailored to your language model applications.</p>
-        <p><a href="features.html" style="background-color:#ffde59;color:#182657;padding:0.7rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:bold;">Explore Features</a></p>
-    </section>
-    <div class="container">
-        <h2>What We Do</h2>
-        <p>SecureLLM enables organizations to rigorously test large language models against a diverse set of adversarial prompts. By simulating jailbreaks, prompt injections, sensitive information leakage and tool abuse, we help you uncover hidden risks and develop effective mitigations. Our services are grounded in industry frameworks for responsible AI and risk management.</p>
-        <div class="features-list">
-            <div class="feature-item">
-                <h3>Adversarial Simulation</h3>
-                <p>Comprehensive prompt corpora to probe model behavior across categories such as jailbreak, injection, and sensitive data leakage.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Automated Evaluation</h3>
-                <p>Automated scoring and reporting of model responses, including evasion rates and detection summaries.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Risk Mitigation Insights</h3>
-                <p>Actionable recommendations to improve model safety and compliance based on observed vulnerabilities.</p>
-            </div>
-        </div>
+  <!-- Header -->
+  <header>
+    <h1>NPVIS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Audit AI Systems with Confidence</h2>
+    <p>
+      <strong>Neural Processing Validation &amp; Integrity Solutions (NPVIS)</strong> helps AI startups and teams validate their models before they scale.
+      Our harness blends adversarial red-teaming with process-aware checks like chain-of-work validation, workflow compliance, and pipeline robustness.
+    </p>
+    <p>
+      <a href="contact.html" class="btn">Book a 20-min Intro Call</a>
+      <a href="features.html" class="btn" style="margin-left:10px;">Explore Features</a>
+    </p>
+  </section>
+
+  <!-- Value Cards -->
+  <section class="grid">
+    <div class="card">
+      <h3>Comprehensive Coverage</h3>
+      <p>Jailbreaks, prompt/indirect injection (RAG/tools), sensitive-data leakage, tool/argument abuse, robustness attacks, and multilingual/domain probes.</p>
     </div>
-    <footer>
-        <p>&copy; 2025 SecureLLM. All rights reserved.</p>
-    </footer>
+    <div class="card">
+      <h3>Process &amp; Accountability</h3>
+      <p>We don’t just test outputs — we validate reasoning steps, sequence adherence, and chain-of-work integrity, with optional human-augmented confirmations.</p>
+    </div>
+    <div class="card">
+      <h3>Startup-Focused Reports</h3>
+      <p>Concise, actionable scorecards founders can share with customers, investors, and partners to demonstrate trustworthiness and readiness.</p>
+    </div>
+  </section>
+
+  <!-- What We Do (Updated) -->
+  <div class="container">
+    <h2>What We Do</h2>
+    <p>
+      NPVIS delivers practical, evidence-based audits for AI systems. We simulate real-world failure modes — jailbreaks, injection, leakage, and tool abuse — and
+      also test <strong>how</strong> your model operates inside workflows. That means chain-of-work validation, workflow compliance checks, and pipeline robustness,
+      so you uncover the operational issues that often derail enterprise pilots.
+    </p>
+
+    <div class="features-list">
+      <div class="feature-item">
+        <h3>Adversarial Simulation</h3>
+        <p>Multilingual/domain prompts for jailbreaks, indirect injection via markdown/HTML/JSON, and safe handling of malformed schemas and tool errors.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Automated Evaluation</h3>
+        <p>Evasion and severe-violation rates, fairness/toxicity deltas, hallucination risk, chain-of-work presence, workflow compliance, and pipeline robustness.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Actionable Hardening</h3>
+        <p>Guardrails, retrieval/HTML/JSON sanitizers, tool allow-lists and schema validation, rate limits, safety-tuning guidance — plus regression packs for CI.</p>
+      </div>
+    </div>
+
+    <!-- Optional trust/governance block -->
+    <div class="features-list">
+      <div class="feature-item">
+        <h3>Governance Alignment</h3>
+        <p>Findings mapped to <strong>NIST AI-RMF</strong> and <strong>MITRE ATLAS</strong> so your evidence is defensible in diligence and early enterprise conversations.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Built for Early Teams</h3>
+        <p>Fast setup, clear outputs, and founder-friendly reports that unblock pilots, partnerships, and investor reviews.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Continuous Validation</h3>
+        <p>Every issue becomes a regression test. Model/prompt/data changes trigger re-runs for traceable improvements and release gates.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Neural Processing Validation &amp; Integrity Solutions (NPVIS). All rights reserved.</p>
+  </footer>
 </body>
 </html>
