@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Audit & Red-Team</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureLLM - AI Red Teaming & Evaluation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="brand">AI Audit & Red-Team</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="cta">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Audit your LLM apps with confidence</h1>
-    <p>We uncover jailbreaks, prompt injection, leakage, bias & robustness issues—then help you fix them.</p>
-    <a class="btn" href="contact.html">Book a 20-min intro</a>
-  </section>
-
-  <section class="grid">
-    <div class="card">
-      <h3>Comprehensive coverage</h3>
-      <p>Jailbreaks, prompt/indirect injection (RAG/tools), leakage, tool abuse, robustness (FGSM/PGD), multilingual tests.</p>
+    <header>
+        <h1>SecureLLM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Robust AI Evaluation & Red Teaming for LLMs</h2>
+        <p>Identify vulnerabilities, test safeguards and ensure responsible AI deployments. Our platform provides comprehensive adversarial testing and evaluation tailored to your language model applications.</p>
+        <p><a href="features.html" style="background-color:#ffde59;color:#182657;padding:0.7rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:bold;">Explore Features</a></p>
+    </section>
+    <div class="container">
+        <h2>What We Do</h2>
+        <p>SecureLLM enables organizations to rigorously test large language models against a diverse set of adversarial prompts. By simulating jailbreaks, prompt injections, sensitive information leakage and tool abuse, we help you uncover hidden risks and develop effective mitigations. Our services are grounded in industry frameworks for responsible AI and risk management.</p>
+        <div class="features-list">
+            <div class="feature-item">
+                <h3>Adversarial Simulation</h3>
+                <p>Comprehensive prompt corpora to probe model behavior across categories such as jailbreak, injection, and sensitive data leakage.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Automated Evaluation</h3>
+                <p>Automated scoring and reporting of model responses, including evasion rates and detection summaries.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Risk Mitigation Insights</h3>
+                <p>Actionable recommendations to improve model safety and compliance based on observed vulnerabilities.</p>
+            </div>
+        </div>
     </div>
-    <div class="card">
-      <h3>Transparent evidence</h3>
-      <p>Every finding includes prompts, outputs, traces & severity mapped to NIST AI-RMF & MITRE ATLAS.</p>
-    </div>
-    <div class="card">
-      <h3>Actionable hardening</h3>
-      <p>Guardrails, sanitizers, tool permissions, and regression packs wired to your CI.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© <span id="y"></span> AI Audit & Red-Team • <a href="about.html">About</a> • <a href="features.html">Features</a> • <a href="contact.html">Contact</a></p>
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <footer>
+        <p>&copy; 2025 SecureLLM. All rights reserved.</p>
+    </footer>
 </body>
 </html>
